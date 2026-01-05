@@ -347,6 +347,92 @@ function App() {
                 </div>
             </section>
 
+            {/* Featured Projects Section */}
+            <section className="section projects-section">
+                <div className="section-header">
+                    <div className="section-label-wrapper">
+                        <span className="section-label-icon">✦</span>
+                        <span className="section-label-text">Neler Yaptık?</span>
+                    </div>
+                    <h2 className="section-title-large">Dönüşüme Bizimle Başlayanlar</h2>
+                    <p className="section-description-large">
+                        Kurumsal vizyonlarını dijitale taşıyan markalarla birçok başarılı projeye imza attık. Web tasarımından dijital pazarlamaya, sosyal medya yönetiminden e-ticaret çözümlerine kadar sunduğumuz hizmetlerle yüksek memnuniyet ve sürdürülebilir başarı sağladık. İşte dönüşüm yolculuğunu bizimle başlatan bazı iş ortaklarımız.
+                    </p>
+                </div>
+
+                <div className="container projects-container">
+                    {/* Project 1: Red Castle */}
+                    <div className="project-card">
+                        <div className="project-image-wrapper">
+                            <img src="/img/projeler/kirmizisato.webp" alt="Red Castle Project" className="project-image" />
+                        </div>
+                        <div className="project-content">
+                            <div className="project-brand-header">
+                                <h3 className="project-title">Red Castle</h3>
+                            </div>
+                            <h4 className="project-subtitle">E-ticaret ve Pazaryeri yönetimine sıfırdan birlikte adım attığımız Kırmızı Şato ile yıllık ciro hedeflerine adım adım yürümekteyiz.</h4>
+                            <div className="project-tags">
+                                <span className="project-tag">İkas</span>
+                                <span className="project-tag">E-Ticaret</span>
+                                <span className="project-tag">Trendyol</span>
+                                <span className="project-tag">Hepsi Burada</span>
+                                <span className="project-tag">Meta</span>
+                                <span className="project-tag">Google</span>
+                                <span className="project-tag">Instagram</span>
+                            </div>
+                            <button className="btn-primary project-btn">Projeyi İncele</button>
+                        </div>
+                    </div>
+
+                    {/* Project 2: Yoi Studio (Text Left, Image Right) */}
+                    <div className="project-card reverse-layout">
+                        <div className="project-content">
+                            <div className="project-brand-header">
+                                <h3 className="project-title">Yoi Studio</h3>
+                            </div>
+                            <h4 className="project-subtitle">Fiziki mağazanın kurulumundan e ticaretin kurulumuna, ticarete dair tüm adımları birlikte attığımız Yoi Studio, bizimle birlikte iç dekorasyona vizyon kazandıran ihracat serüvenini tüm hızıyla sürdürmektedir.</h4>
+                            <div className="project-tags">
+                                <span className="project-tag">İkas</span>
+                                <span className="project-tag">E-Ticaret</span>
+                                <span className="project-tag">Meta</span>
+                                <span className="project-tag">Google Ads</span>
+                                <span className="project-tag">Instagram</span>
+                                <span className="project-tag">Katalog</span>
+                                <span className="project-tag">Tabela</span>
+                                <span className="project-tag">Logo</span>
+                            </div>
+                            <button className="btn-primary project-btn">Projeyi İncele</button>
+                        </div>
+                        <div className="project-image-wrapper">
+                            <img src="/img/projeler/yoi-katalog.webp" alt="Yoi Studio Project" className="project-image" />
+                        </div>
+                    </div>
+
+                    {/* Project 3: Sidrex */}
+                    <div className="project-card">
+                        <div className="project-image-wrapper">
+                            <img src="/img/projeler/sidrex.webp" alt="Sidrex Project" className="project-image" />
+                        </div>
+                        <div className="project-content">
+                            <div className="project-brand-header">
+                                <h3 className="project-title">Sidrex</h3>
+                            </div>
+                            <h4 className="project-subtitle">Takviye edici gıda sektöründe çarpıcı izler bırakmak için pazaryerinde varolan Sidrex, fosil.io iş birliği ile pazaryerlerinde zirveye hızla yükselişini sürdürürken, eticaret serüveninde emin adımlarla ilerlemektedir.</h4>
+                            <div className="project-tags">
+                                <span className="project-tag">Trendyol</span>
+                                <span className="project-tag">İkas</span>
+                                <span className="project-tag">E-Ticaret</span>
+                                <span className="project-tag">Hepsi Burada</span>
+                                <span className="project-tag">Meta</span>
+                                <span className="project-tag">Google</span>
+                            </div>
+                            <button className="btn-primary project-btn">Projeyi İncele</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
             {/* Stats Section */}
             <section className="section stats-section">
                 <div className="container">
