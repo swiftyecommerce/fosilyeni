@@ -168,8 +168,7 @@ function App() {
                             Dijital Dönüşüm Ajansı
                         </span>
                         <h1 className="hero-title">
-                            <span className="hero-title-italic">Fosil ile</span><br />
-                            <span className="hero-title-accent">Dijital Evrimi</span><br />
+                            <span className="hero-title-bold">Fosil ile</span> <span className="highlight-marker">Dijital Evrimi</span><br />
                             <span className="hero-title-bold">Başlat.</span>
                         </h1>
 
@@ -237,6 +236,69 @@ function App() {
                             Sizi de Ekleyelim
                             <Plus size={16} />
                         </a>
+                    </div>
+                </div>
+            </section>
+
+            {/* Agency Intro Section */}
+            <section className="section agency-intro-section">
+                <div className="agency-container">
+                    <div className="agency-intro-grid">
+                        {/* Left: Video */}
+                        <div className="agency-video-container">
+                            <div className="agency-video-wrapper">
+                                <video
+                                    src="/img/ajans.mp4"
+                                    className="agency-video"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                />
+                            </div>
+                            {/* Decorative Bracket */}
+                            <div className="agency-bracket"></div>
+                        </div>
+
+                        {/* Right: Content */}
+                        <div className="agency-content">
+                            <div className="agency-label">DİJİTAL BİRİM DEPARTMANINIZ GİBİ ÇALIŞAN AJANS</div>
+                            <h2 className="agency-title">Siz İşinize Odaklanın, <span className="text-highlight">Operasyonu Bize</span> Bırakın.</h2>
+                            <p className="agency-description">
+                                Fosil, markanızın dijital çağda hayatta kalması ve evrimleşmesi için gereken genetik kodları yazar.
+                                Sıradan bir ajans değil, dijital ekosistemin zorlu koşullarında sizi zirveye taşıyan evrimsel bir güçtür.
+                            </p>
+
+                            <div className="agency-features">
+                                <div className="agency-feature-card">
+                                    <div className="feature-icon-box">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                    </div>
+                                    <div className="feature-text">
+                                        <h4>Operasyonel Yükü Azaltır</h4>
+                                        <p>Kurulumdan pazarlamaya, pazar yerlerinden lojistiğe kadar.</p>
+                                    </div>
+                                </div>
+                                <div className="agency-feature-card">
+                                    <div className="feature-icon-box">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                                    </div>
+                                    <div className="feature-text">
+                                        <h4>Veri Odaklı Büyüme</h4>
+                                        <p>Performans ölçer, optimize eder ve sürdürülebilir büyüme sağlar.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="agency-actions">
+                                <a href="#hakkimizda" className="btn-story-text">
+                                    Fosil'in Hikayesini Keşfet
+                                </a>
+                                <a href="#hakkimizda" className="btn-story-arrow">
+                                    <span className="arrow-icon">→</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
