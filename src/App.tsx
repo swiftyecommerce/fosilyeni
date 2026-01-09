@@ -19,8 +19,34 @@ import {
     Video,
     Package,
     LayoutGrid,
-    BookOpen
+    BookOpen,
+    Star
 } from 'lucide-react'
+
+// Testimonials data from original site
+const testimonials = [
+    {
+        name: "Can Özkan",
+        role: "Kurucu Ortak",
+        company: "Batı Sömine",
+        initials: "CÖ",
+        content: "Basılı reklam tasarımlarımızı dijital dünyaya taşımak için Fosil Ajans ile çalıştık. Üretim süreçlerimizi optimize eden çözümler geliştirdiler. Sosyal medya yönetimi hizmetleri sayesinde marka bilinirliğimiz %180 arttı. Ekip her zaman ulaşılabilir ve çözüm odaklı."
+    },
+    {
+        name: "Selin Yıldız",
+        role: "Dijital Pazarlama Uzmanı",
+        company: "Emirgan Halı",
+        initials: "SY",
+        content: "SEO çalışmaları ve dijital reklam yönetimi konusunda Fosil Ajans'ın performansı gerçekten etkileyici. Organik trafiğimiz %250 artarken, arama motoru sıralamalarımızda önemli iyileşmeler yaşadık. E-ticaret çözümleri de beklentilerimizin üzerindeydi."
+    },
+    {
+        name: "Burak Şahin",
+        role: "Marka Müdürü",
+        company: "Kisshu Kozmetik",
+        initials: "BŞ",
+        content: "Fosil Ajans'ın grafik tasarım ve logo tasarım hizmetleri markamızı tamamen yeniledi. Kurumsal kimlik çalışmaları profesyonel bir şekilde tamamlandı. Web tasarım sürecinde gösterdikleri yaratıcılık ve teknik uzmanlık takdire şayan."
+    }
+]
 
 // Reference project data
 const referenceProjects = [
@@ -446,8 +472,11 @@ function App() {
                         </div>
                     </div>
 
-                    {/* Project 2: Yoi Studio (Text Left, Image Right) */}
-                    <div className="project-card reverse-layout">
+                    {/* Project 2: Yoi Studio */}
+                    <div className="project-card">
+                        <div className="project-image-wrapper">
+                            <img src="/img/projeler/yoi-katalog.webp" alt="Yoi Studio Project" className="project-image" />
+                        </div>
                         <div className="project-content">
                             <div className="project-brand-header">
                                 <h3 className="project-title">Yoi Studio</h3>
@@ -464,9 +493,6 @@ function App() {
                                 <span className="project-tag">Logo</span>
                             </div>
                             <button className="btn-primary project-btn">Projeyi İncele</button>
-                        </div>
-                        <div className="project-image-wrapper">
-                            <img src="/img/projeler/yoi-katalog.webp" alt="Yoi Studio Project" className="project-image" />
                         </div>
                     </div>
 
@@ -492,6 +518,188 @@ function App() {
                         </div>
                     </div>
 
+                </div>
+            </section>
+
+            {/* Testimonials Section */}
+            <section className="section testimonials-section">
+                <div className="container">
+                    <div className="section-header">
+                        <div className="section-label-wrapper testimonials-label">
+                            <span className="section-label-icon">✦</span>
+                            <span className="section-label-text">Yorumlar</span>
+                        </div>
+                        <h2 className="section-title-large">
+                            Mutlu <span className="text-highlight">Müşterilerimiz</span>
+                        </h2>
+                        <p className="section-description-large">
+                            Fosil ile olağanüstü dönüşümler yaşayan müşterilerimizin deneyimlerini dinleyin.
+                        </p>
+                    </div>
+
+                    <div className="testimonials-grid">
+                        {testimonials.map((testimonial, index) => (
+                            <div key={index} className="testimonial-card">
+                                <div className="testimonial-stars">
+                                    {[...Array(5)].map((_, i) => (
+                                        <Star key={i} size={18} fill="currentColor" />
+                                    ))}
+                                </div>
+                                <p className="testimonial-content">{testimonial.content}</p>
+                                <div className="testimonial-author">
+                                    <div className="testimonial-avatar">
+                                        <span className="testimonial-initials">{testimonial.initials}</span>
+                                    </div>
+                                    <div className="testimonial-info">
+                                        <h4 className="testimonial-name">{testimonial.name}</h4>
+                                        <p className="testimonial-role">{testimonial.role}, {testimonial.company}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Blog Section */}
+            <section className="section blog-section" id="blog">
+                <div className="container">
+                    <div className="section-header">
+                        <div className="section-label-wrapper">
+                            <span className="section-label-icon">✦</span>
+                            <span className="section-label-text">Blog</span>
+                        </div>
+                        <h2 className="section-title-large">Bilgi Paylaştıkça <span className="text-highlight">Çoğalır</span></h2>
+                        <p className="section-description-large">
+                            Güncel pazaryeri trendleri, reklam stratejileri ve mağaza optimizasyonu üzerine rehber içerikler. E-ticarette güncel kalmak isteyen markalar için Fosil Blog.
+                        </p>
+                    </div>
+
+                    <div className="blog-grid">
+                        <a href="#" className="blog-card">
+                            <div className="blog-image-wrapper">
+                                <div className="blog-image-placeholder blog-placeholder-1"></div>
+                                <div className="blog-overlay"></div>
+                                <div className="blog-category-tags">
+                                    <span className="blog-tag">E-Ticaret</span>
+                                    <span className="blog-tag blog-tag-accent">Gümrük</span>
+                                </div>
+                            </div>
+                            <div className="blog-content">
+                                <h3 className="blog-title">Basitleştirilmiş Gümrük Beyannamesinde (BGB) Önemli Değişiklik</h3>
+                                <p className="blog-excerpt">Ullamcorper dignissim cras tincidunt lobortis. Lorem ipsum dolor sit amet consectetur. Bibendum ut tristique et egestas.</p>
+                                <span className="blog-time">3 gün önce</span>
+                            </div>
+                        </a>
+
+                        <a href="#" className="blog-card">
+                            <div className="blog-image-wrapper">
+                                <div className="blog-image-placeholder blog-placeholder-2"></div>
+                                <div className="blog-overlay"></div>
+                                <div className="blog-category-tags">
+                                    <span className="blog-tag">Eğitim</span>
+                                    <span className="blog-tag blog-tag-accent">E-İhracat</span>
+                                </div>
+                            </div>
+                            <div className="blog-content">
+                                <h3 className="blog-title">Akbank Dönüşüm Akademisi & Timwings E-Ticaret ve E-İhracat Eğitimleri</h3>
+                                <p className="blog-excerpt">Ullamcorper dignissim cras tincidunt lobortis. Lorem ipsum dolor sit amet consectetur. Bibendum ut tristique et egestas.</p>
+                                <span className="blog-time">1 hafta önce</span>
+                            </div>
+                        </a>
+
+                        <a href="#" className="blog-card">
+                            <div className="blog-image-wrapper">
+                                <div className="blog-image-placeholder blog-placeholder-3"></div>
+                                <div className="blog-overlay"></div>
+                                <div className="blog-category-tags">
+                                    <span className="blog-tag">Lojistik</span>
+                                    <span className="blog-tag blog-tag-accent">Kargo</span>
+                                </div>
+                            </div>
+                            <div className="blog-content">
+                                <h3 className="blog-title">E-Ticarette Kargo ve Lojistik Çözümleri (Kargo Şirketi ile Anlaşın)</h3>
+                                <p className="blog-excerpt">Ullamcorper dignissim cras tincidunt lobortis. Lorem ipsum dolor sit amet consectetur. Bibendum ut tristique et egestas.</p>
+                                <span className="blog-time">2 hafta önce</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div className="blog-actions">
+                        <a href="#" className="btn btn-secondary btn-lg">Tüm Yazıları Gör</a>
+                    </div>
+                </div>
+            </section>
+
+            {/* Team Section */}
+            <section className="section team-section" id="team">
+                <div className="container">
+                    <div className="section-header">
+                        <div className="section-label-wrapper">
+                            <span className="section-label-icon">✦</span>
+                            <span className="section-label-text">Ekibimiz</span>
+                        </div>
+                        <h2 className="section-title-large">Dijital Evrimin <span className="text-highlight">Öncüleri</span></h2>
+                        <p className="section-description-large">
+                            Fosil Dijital, pazarlama, tasarım, operasyon ve yazılımı aynı masada buluşturan, markaların dijital evrimine liderlik eden çekirdek bir ekiptir. Her proje bizim için sadece bir iş değil, birlikte yazılan bir başarı hikayesidir.
+                        </p>
+                    </div>
+
+                    <div className="team-grid">
+                        <div className="team-card">
+                            <div className="team-image-wrapper">
+                                <img src="/img/ekip/serdar.png" alt="Serdar Topbaş" className="team-image" />
+                                {/* No social links for Serdar Topbaş yet */}
+                                <div className="team-info-overlay">
+                                    <h3 className="team-name">Serdar Topbaş</h3>
+                                    <p className="team-role">Kurucu Ortak</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="team-card">
+                            <div className="team-image-wrapper">
+                                <img src="/img/ekip/serhat.png" alt="Serhat Atik" className="team-image" />
+                                <div className="team-social-overlay">
+                                    <div className="team-social-links">
+                                        <a href="https://instagram.com/iamserhatatik" target="_blank" rel="noopener noreferrer" className="team-social-link"><Instagram size={20} /></a>
+                                        <a href="https://linkedin.com/in/serhatatik" target="_blank" rel="noopener noreferrer" className="team-social-link"><Linkedin size={20} /></a>
+                                        <a href="https://x.com/iamserhatatik" target="_blank" rel="noopener noreferrer" className="team-social-link"><Twitter size={20} /></a>
+                                    </div>
+                                </div>
+                                <div className="team-info-overlay">
+                                    <h3 className="team-name">Serhat Atik</h3>
+                                    <p className="team-role">Kurucu Ortak</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="team-card">
+                            <div className="team-image-wrapper">
+                                <img src="/img/ekip/gokhan.png" alt="Gökhan Güran" className="team-image" />
+                                {/* No social links for Gökhan Güran yet */}
+                                <div className="team-info-overlay">
+                                    <h3 className="team-name">Gökhan Güran</h3>
+                                    <p className="team-role">Dijital Pazarlama Uzmanı</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="team-card">
+                            <div className="team-image-wrapper">
+                                <img src="/img/ekip/gokce.png" alt="Gökçe N. Kudak" className="team-image" />
+                                {/* No social links for Gökçe N. Kudak yet */}
+                                <div className="team-info-overlay">
+                                    <h3 className="team-name">Gökçe N. Kudak</h3>
+                                    <p className="team-role">Art Direktör</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="team-actions">
+                        <a href="#" className="btn btn-secondary btn-lg">Tüm Ekiple Tanışın</a>
+                    </div>
                 </div>
             </section>
 
