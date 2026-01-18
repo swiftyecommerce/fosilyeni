@@ -17,7 +17,6 @@ import {
     Linkedin,
     Twitter,
     Menu,
-    X,
     ShoppingCart,
     Lightbulb,
     Palette,

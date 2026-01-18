@@ -1,0 +1,13 @@
+src/components/common/Header.tsx(3,16): error TS6133: 'Plus' is declared but its value is never read.
+src/components/ui/meteors.tsx(2,1): error TS6133: 'React' is declared but its value is never read.
+src/components/ui/meteors.tsx(14,27): error TS6133: 'el' is declared but its value is never read.
+src/components/ui/modern-background-paths.tsx(56,15): error TS6133: 'frequency' is declared but its value is never read.
+src/components/ui/modern-background-paths.tsx(103,11): error TS7034: Variable 'connections' implicitly has type 'any[]' in some locations where its type cannot be determined.
+src/components/ui/modern-background-paths.tsx(122,14): error TS7005: Variable 'connections' implicitly has an 'any[]' type.
+src/pages/Home.tsx(7,5): error TS6133: 'Instagram' is declared but its value is never read.
+src/pages/Home.tsx(8,5): error TS6133: 'Linkedin' is declared but its value is never read.
+src/pages/Home.tsx(9,5): error TS6133: 'Twitter' is declared but its value is never read.
+src/pages/Home.tsx(74,7): error TS6133: 'iconMap' is declared but its value is never read.
+src/pages/Home.tsx(239,51): error TS2339: Property 'items' does not exist on type 'CategoryItem'.
+src/pages/Home.tsx(239,75): error TS7006: Parameter 'service' implicitly has an 'any' type.
+src/pages/Home.tsx(239,84): error TS7006: Parameter 'i' implicitly has an 'any' type.

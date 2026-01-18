@@ -8,7 +8,7 @@ import {
     Linkedin,
     Twitter
 } from 'lucide-react'
-import { navigationData } from '../fosil_data'
+import { navigationData, ServiceItem } from '../fosil_data'
 import { Meteors } from '@/components/ui/meteors'
 
 // Testimonials data
@@ -70,11 +70,6 @@ const brandLogos = [
 
 const categories = navigationData.categories
 
-// Simple icon map - can be expanded or replaced with proper imports
-const iconMap: { [key: string]: React.ReactNode } = {
-    // ... we can rely on defaults or pass icons properly. For now simple.
-}
-
 export default function Home() {
     const [refGalleryOffset, setRefGalleryOffset] = useState(0)
     const lastScrollY = useRef(0)
@@ -83,17 +78,15 @@ export default function Home() {
         const handleScroll = () => {
             const currentScrollY = window.scrollY
             const scrollDelta = currentScrollY - lastScrollY.current
-            setRefGalleryOffset(prev => {
-                const newOffset = prev - scrollDelta * 0.5
-                const maxOffset = 200
-                const minOffset = -800
-                return Math.max(minOffset, Math.min(maxOffset, newOffset))
-            })
+            const newOffset = refGalleryOffset - scrollDelta * 0.5
+            const maxOffset = 200
+            const minOffset = -800
+            setRefGalleryOffset(Math.max(minOffset, Math.min(maxOffset, newOffset)))
             lastScrollY.current = currentScrollY
         }
         window.addEventListener('scroll', handleScroll, { passive: true })
         return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+    }, [refGalleryOffset])
 
     return (
         <>
@@ -196,7 +189,6 @@ export default function Home() {
                                 Fosil, markanızın dijital çağda hayatta kalması ve evrimleşmesi için gereken genetik kodları yazar.
                                 Sıradan bir ajans değil, dijital ekosistemin zorlu koşullarında sizi zirveye taşıyan evrimsel bir güçtür.
                             </p>
-                            {/* Features omitted for brevity but can be added back */}
                             <div className="agency-actions">
                                 <a href="#hakkimizda" className="btn-story-text">Fosil'in Hikayesini Keşfet</a>
                                 <a href="#hakkimizda" className="btn-story-arrow"><span className="arrow-icon">→</span></a>
@@ -236,8 +228,8 @@ export default function Home() {
                                     </div>
                                     <p className="service-card-description">{category.description}</p>
                                     <div className="service-card-tags">
-                                        {category.items?.slice(0, 4).map((service, i) => (
-                                            <span key={i} className="service-tag">{service}</span>
+                                        {category.services?.slice(0, 4).map((service: ServiceItem, i: number) => (
+                                            <span key={i} className="service-tag">{service.title}</span>
                                         ))}
                                     </div>
                                     <div className="absolute inset-0 h-full w-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
