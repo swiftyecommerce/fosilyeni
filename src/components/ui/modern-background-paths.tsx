@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react"
 // Geometric Grid Paths
 function GeometricPaths() {
     const gridSize = 40
-    const paths = []
+    const paths: { id: string; d: string; delay: number }[] = []
 
     for (let x = 0; x < 20; x++) {
         for (let y = 0; y < 12; y++) {
@@ -53,7 +53,6 @@ function GeometricPaths() {
 function FlowPaths() {
     const flowPaths = Array.from({ length: 12 }, (_, i) => {
         const amplitude = 50 + i * 10
-        const frequency = 0.01 + i * 0.002
         const offset = i * 60
 
         return {
@@ -100,7 +99,7 @@ function NeuralPaths() {
         id: `node-${i}`
     }))
 
-    const connections = []
+    const connections: { id: string; d: string; delay: number }[] = []
     nodes.forEach((node, i) => {
         const nearbyNodes = nodes.filter((other, j) => {
             if (i === j) return false
@@ -265,8 +264,8 @@ export default function EnhancedBackgroundPaths() {
                     <motion.div
                         key={i}
                         className={`w-2 h-2 rounded-full transition-colors duration-300 ${i === currentPattern
-                                ? 'bg-slate-800 dark:bg-white'
-                                : 'bg-slate-300 dark:bg-slate-600'
+                            ? 'bg-slate-800 dark:bg-white'
+                            : 'bg-slate-300 dark:bg-slate-600'
                             }`}
                         animate={{
                             scale: i === currentPattern ? 1.2 : 1,

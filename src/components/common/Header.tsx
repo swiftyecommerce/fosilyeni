@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, Plus } from 'lucide-react'
+import { Menu } from 'lucide-react'
 import { navigationData } from '../../fosil_data'
 
 const categories = navigationData.categories

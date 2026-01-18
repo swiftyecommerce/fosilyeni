@@ -3,10 +3,7 @@ import {
     Layers,
     ArrowRight,
     Star,
-    Plus,
-    Instagram,
-    Linkedin,
-    Twitter
+    Plus
 } from 'lucide-react'
 import { navigationData, ServiceItem } from '../fosil_data'
 import { Meteors } from '@/components/ui/meteors'
